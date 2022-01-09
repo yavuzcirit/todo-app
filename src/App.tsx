@@ -22,7 +22,9 @@ const App:FC=()=>{
 const addTask=():void=>{
   const newTask={taskName:task,deadline:deadline}
   setTodoList([...todoList,newTask]);
-  console.log(todoList)
+  //console.log(todoList)
+  setTask("");
+  setDeadline(0);
 }
 
 
@@ -32,8 +34,8 @@ const addTask=():void=>{
       <h1>Todo App</h1>
       <div className="header">
           <div className='inputContainer'>
-            <input type="text" placeholder="Task..." name="task" onChange={handleChange}/>
-            <input type="text" placeholder="Deadline(in Days)..." name="deadline" onChange={handleChange}/>
+            <input type="text" placeholder="Task..." name="task" value={task} onChange={handleChange}/>
+            <input type="text" placeholder="Deadline(in Days)..." value={deadline} name="deadline" onChange={handleChange}/>
           </div>
           <button onClick={addTask}>Add Task</button>
       </div>
