@@ -28,6 +28,12 @@ const addTask=():void=>{
   setDeadline(0);
 }
 
+const completeTask=(taskNameToDelete:string):void=>{
+  setTodoList(todoList.filter((task)=>{
+    return task.taskName!=taskNameToDelete;
+  }))
+}
+
 
 
   return (
@@ -42,7 +48,7 @@ const addTask=():void=>{
       </div>
       <div className="todoList">
         {todoList.map((task:ITask,key:number)=>{
-          return <TodoTask key={key} task={task}/>
+          return <TodoTask completeTask={completeTask} key={key} task={task}/>
         })}
       </div>
     </div>
