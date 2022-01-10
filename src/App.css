@@ -9,7 +9,7 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 h1 {
-  margin-top: 60px;
+  margin-top: 80px;
   font-style: italic;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-style: oblique;
@@ -49,9 +49,10 @@ input {
 }
 
 .todoList {
-  margin-left: 32%;
+  margin-left: 50%;
+
   margin-top: 20px;
-  flex: 70%;
+  flex: 50%;
   flex-direction: column;
   width: 100%;
   align-items: center;
